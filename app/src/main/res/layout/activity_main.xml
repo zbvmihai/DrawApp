@@ -12,12 +12,107 @@
         android:layout_height="0dp"
         android:layout_margin="5dp"
         android:background="@drawable/background_view_layout"
-        app:layout_constraintBottom_toTopOf="@id/ib_brush"
+        app:layout_constraintBottom_toTopOf="@id/ll_paint_colors"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/ll_paint_colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toTopOf="@id/ib_brush"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drawView">
+
+        <ImageButton
+            android:id="@+id/ib_skin"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@color/skin"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/skin" />
+
+        <ImageButton
+            android:id="@+id/ib_black"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/black" />
+
+        <ImageButton
+            android:id="@+id/ib_red"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@color/red"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/red" />
+
+        <ImageButton
+            android:id="@+id/ib_green"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@color/green"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/green" />
+
+        <ImageButton
+            android:id="@+id/ib_blue"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@color/blue"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/blue" />
+
+        <ImageButton
+            android:id="@+id/ib_yellow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@color/yellow"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/yellow" />
+
+        <ImageButton
+            android:id="@+id/ib_purple"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@color/purple"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/purple" />
+
+        <ImageButton
+            android:id="@+id/ib_white"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/white" />
+
+        <ImageButton
+            android:id="@+id/ib_random"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@color/random"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/random" />
+
+
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/ib_brush"
@@ -30,7 +125,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_paint_colors"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
