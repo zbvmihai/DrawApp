@@ -30,6 +30,7 @@ import java.io.File
 import java.io.FileOutputStream
 
 
+@Suppress("SameParameterValue", "UNUSED_ANONYMOUS_PARAMETER")
 class MainActivity : AppCompatActivity() {
 
     private var customerProgressDialog: Dialog? = null
@@ -109,7 +110,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         for (button in palletButtons!!) {
-            button?.setOnClickListener {
+            button.setOnClickListener {
                 paintClicked(button)
             }
         }
@@ -154,7 +155,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showBrushSizeChooserDialog() {
-        var brushDialog = Dialog(this)
+        val brushDialog = Dialog(this)
         brushDialog.setContentView(R.layout.dialog_brush_size)
         brushDialog.setTitle("Brush size: ")
         val smallBtn = brushDialog.findViewById<ImageButton>(R.id.ib_small_brush)

@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">DrawApp</string>
+    <string name="background">Background</string>
+    <string name="skin_color">Skin Color</string>
+    <string name="black_color" />
+    <string name="random_color" />
+    <string name="red_color" />
+    <string name="green_color" />
+    <string name="blue_color" />
+    <string name="yellow_color" />
+    <string name="purple_color" />
+    <string name="white_color" />
+    <string name="gallery_button">Gallery Button</string>
+    <string name="undo_button">Undo Button</string>
+    <string name="redo_button">Redo Button</string>
+    <string name="brushpicker_button">BrushPicker Button</string>
+    <string name="save_button">Save Button</string>
+    <string name="please_wait">Please wait...</string>
 </resources>

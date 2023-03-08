@@ -1,5 +1,6 @@
 package com.zabava.drawapp
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
@@ -7,6 +8,7 @@ import android.util.TypedValue
 import android.view.MotionEvent
 import android.view.View
 
+@Suppress("UNREACHABLE_CODE")
 class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) {
 
     private var mDrawPath: CustomPath? = null
@@ -69,6 +71,7 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
         }
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         val touchX = event?.x
         val touchY = event?.y
@@ -118,8 +121,6 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
 
     internal inner class CustomPath(
         var color: Int,
-        var brushThickness: Float) : Path() {
-
-    }
+        var brushThickness: Float) : Path()
 
 }

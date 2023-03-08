@@ -25,7 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            tools:src="@drawable/image" />
+            tools:src="@drawable/image"
+            android:contentDescription="@string/background" />
 
 
         <com.zabava.drawapp.DrawingView
@@ -54,7 +55,8 @@
             android:layout_margin="5dp"
             android:background="@color/skin"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/skin" />
+            android:tag="@color/skin"
+            android:contentDescription="@string/skin_color" />
 
         <ImageButton
             android:id="@+id/ib_black"
@@ -63,7 +65,8 @@
             android:layout_margin="5dp"
             android:background="@color/black"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/black" />
+            android:tag="@color/black"
+            android:contentDescription="@string/black_color"/>
 
         <ImageButton
             android:id="@+id/ib_red"
@@ -72,7 +75,8 @@
             android:layout_margin="5dp"
             android:background="@color/red"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/red" />
+            android:tag="@color/red"
+            android:contentDescription="@string/red_color"/>
 
         <ImageButton
             android:id="@+id/ib_green"
@@ -81,7 +85,8 @@
             android:layout_margin="5dp"
             android:background="@color/green"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/green" />
+            android:tag="@color/green"
+            android:contentDescription="@string/green_color"/>
 
         <ImageButton
             android:id="@+id/ib_blue"
@@ -90,7 +95,8 @@
             android:layout_margin="5dp"
             android:background="@color/blue"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/blue" />
+            android:tag="@color/blue"
+            android:contentDescription="@string/blue_color"/>
 
         <ImageButton
             android:id="@+id/ib_yellow"
@@ -99,7 +105,8 @@
             android:layout_margin="5dp"
             android:background="@color/yellow"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/yellow" />
+            android:tag="@color/yellow"
+            android:contentDescription="@string/yellow_color"/>
 
         <ImageButton
             android:id="@+id/ib_purple"
@@ -108,7 +115,8 @@
             android:layout_margin="5dp"
             android:background="@color/purple"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/purple" />
+            android:tag="@color/purple"
+            android:contentDescription="@string/purple_color"/>
 
         <ImageButton
             android:id="@+id/ib_white"
@@ -117,7 +125,8 @@
             android:layout_margin="5dp"
             android:background="@color/white"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/white" />
+            android:tag="@color/white"
+            android:contentDescription="@string/white_color"/>
 
         <ImageButton
             android:id="@+id/ib_random"
@@ -126,7 +135,8 @@
             android:layout_margin="5dp"
             android:background="@color/random"
             android:src="@drawable/pallet_normal"
-            android:tag="@color/random" />
+            android:tag="@color/random"
+            android:contentDescription="@string/random_color"/>
 
 
     </LinearLayout>
@@ -148,7 +158,7 @@
             android:layout_margin="5dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_gallery"
-            ></ImageButton>
+            android:contentDescription="@string/gallery_button" />
 
         <ImageButton
             android:id="@+id/ib_undo"
@@ -157,7 +167,7 @@
             android:layout_margin="5dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_undo"
-            ></ImageButton>
+            android:contentDescription="@string/undo_button" />
 
         <ImageButton
             android:id="@+id/ib_redo"
@@ -166,7 +176,7 @@
             android:layout_margin="5dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_redo"
-            ></ImageButton>
+            android:contentDescription="@string/redo_button" />
 
         <ImageButton
             android:id="@+id/ib_brush"
@@ -175,7 +185,7 @@
             android:layout_margin="5dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_brush"
-            ></ImageButton>
+            android:contentDescription="@string/brushpicker_button" />
 
         <ImageButton
             android:id="@+id/ib_save"
@@ -184,7 +194,7 @@
             android:layout_margin="5dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_save"
-            ></ImageButton>
+            android:contentDescription="@string/save_button" />
 
 
 
