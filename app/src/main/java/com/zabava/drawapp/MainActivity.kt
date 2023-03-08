@@ -36,9 +36,8 @@ class MainActivity : AppCompatActivity() {
     private var palletButtons: ArrayList<ImageButton>? = null
 
     private val openGalleryLauncher: ActivityResultLauncher<Intent> =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-            result ->
-            if (result.resultCode == RESULT_OK && result.data!=null){
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK && result.data != null) {
                 val imageBackground: ImageView = findViewById(R.id.iv_background)
                 imageBackground.setImageURI(result.data?.data)
             }
@@ -53,8 +52,10 @@ class MainActivity : AppCompatActivity() {
                 if (isGranted) {
                     Toast.makeText(this, "Permission granted", Toast.LENGTH_SHORT).show()
 
-                    val pickIntent = Intent(Intent.ACTION_PICK,
-                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                    val pickIntent = Intent(
+                        Intent.ACTION_PICK,
+                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+                    )
                     openGalleryLauncher.launch(pickIntent)
 
                 } else {
@@ -111,9 +112,17 @@ class MainActivity : AppCompatActivity() {
         ibBrush.setOnClickListener {
             showBrushSizeChooserDialog()
         }
+        val ibUndo: ImageButton = findViewById(R.id.ib_undo)
+        ibUndo.setOnClickListener {
+            drawingView?.onClickUndo()
+        }
+        val ibRedo: ImageButton = findViewById(R.id.ib_redo)
+        ibRedo.setOnClickListener {
+            drawingView?.onClickRedo()
+        }
 
         val ibGallery: ImageButton = findViewById(R.id.ib_gallery)
-        ibGallery.setOnClickListener{
+        ibGallery.setOnClickListener {
             requestStoragePermission()
         }
 
@@ -168,14 +177,24 @@ class MainActivity : AppCompatActivity() {
         builder.create().show()
     }
 
-    private fun requestStoragePermission(){
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                Manifest.permission.READ_EXTERNAL_STORAGE)){
-            showRationalDialog("Kids Drawing App",
-                "Kids Drawing App need to access your storage")
-        }else{
+    private fun requestStoragePermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(
+                this,
+                Manifest.permission.READ_EXTERNAL_STORAGE
+            )
+        ) {
+            showRationalDialog(
+                "Kids Drawing App",
+                "Kids Drawing App need to access your storage"
+            )
+        } else {
             requestPermission.launch(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE))
             // TODO - Add writing external storage permission
         }
+
+    }
+
+    private fun undoDraw() {
+
     }
 }
